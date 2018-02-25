@@ -1,0 +1,98 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.carousel_box {
+    width: 60%;
+    padding-top: 33.72%;
+    background-color: #87CEEB;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    cursor: pointer;
+    &:hover .arrow {
+        width: 20%;
+    }
+    &:hover ol {
+        bottom: 5%;
+    }
+    ul {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        white-space: nowrap;
+        transition: all .8s ease-in-out;
+        -ms-transform: all .8s ease-in-out;
+        -moz-transform: all .8s ease-in-out;
+        -webkit-transform: all .8s ease-in-out;
+        font-size: 0;
+        li {
+            width: 100%;
+            display: inline-block;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .arrow {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 100%;
+        overflow: hidden;
+        transition: width .3s ease-in-out;
+        span {
+            color: rgba(255, 255, 255, .8);
+            font-size: 80px;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &:hover span {
+            color: #FFFFFF;
+        }
+    }
+    .left_arrow {
+        left: 0;
+        background: linear-gradient(90deg, rgba(0, 0, 0, .8), transparent);
+    }
+    .right_arrow {
+        right: 0;
+        background: linear-gradient(-90deg, rgba(0, 0, 0, .8), transparent);
+    }
+    ol {
+        font-size: 0;
+        white-space: nowrap;
+        position: absolute;
+        left: 50%;
+        bottom: -10%;
+        transform: translate(-50%, -50%);
+        transition: bottom .3s ease-in-out;
+        li {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #FFFFFF;
+            border-radius: 50%;
+            margin: 0 2px;
+            cursor: pointer;
+            &:hover {
+                background-color: #87CEEB;
+            }
+        }
+        
+    }
+    .active {
+            background-color: skyblue;
+        }
+}

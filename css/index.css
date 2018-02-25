@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none; }
+
+.carousel_box {
+  width: 60%;
+  padding-top: 33.72%;
+  background-color: #87CEEB;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  cursor: pointer; }
+  .carousel_box:hover .arrow {
+    width: 20%; }
+  .carousel_box:hover ol {
+    bottom: 5%; }
+  .carousel_box ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    white-space: nowrap;
+    transition: all .8s ease-in-out;
+    font-size: 0; }
+    .carousel_box ul li {
+      width: 100%;
+      display: inline-block; }
+      .carousel_box ul li img {
+        width: 100%; }
+  .carousel_box .arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    transition: width .3s ease-in-out; }
+    .carousel_box .arrow span {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 80px;
+      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    .carousel_box .arrow:hover span {
+      color: #FFFFFF; }
+  .carousel_box .left_arrow {
+    left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), transparent); }
+  .carousel_box .right_arrow {
+    right: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0.8), transparent); }
+  .carousel_box ol {
+    font-size: 0;
+    white-space: nowrap;
+    position: absolute;
+    left: 50%;
+    bottom: -10%;
+    transform: translate(-50%, -50%);
+    transition: bottom .3s ease-in-out; }
+    .carousel_box ol li {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: #FFFFFF;
+      border-radius: 50%;
+      margin: 0 2px;
+      cursor: pointer; }
+      .carousel_box ol li:hover {
+        background-color: #87CEEB; }
+  .carousel_box .active {
+    background-color: skyblue; }
+
+/*# sourceMappingURL=index.css.map */
